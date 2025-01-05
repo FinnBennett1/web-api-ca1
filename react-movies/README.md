@@ -17,7 +17,7 @@ This repository contains a ReactJS application built for managing and exploring 
 ### Setup Requirements
 To set up the project locally:
 1. Clone the repository:
-   git clone <https://github.com/FinnBennett1/react-movies-labs.git>
+   git clone <https://github.com/FinnBennett1/web-api-ca1.git>
    
 2. Install dependencies:
     npm install
