@@ -47,37 +47,17 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/" element={<HomePage />} />
-            <Route path="/movies/:id" element={<MoviePage />} />
-            <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
-            <Route path="/movies/popular" element={<PopularMovies />} />
-            <Route path="/movies/trending" element={<TrendingMoviesPage />} />
-            <Route path="/movies/now-playing" element={<NowPlayingMoviesPage />} />
+           
 
             {/* Private Routes */}
-            <Route
-              path="/movies/favorites"
-              element={
-                <PrivateRoute>
-                  <FavoriteMoviesPage />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/reviews/form"
-              element={
-                <PrivateRoute>
-                  <AddMovieReviewPage />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/reviews/:id"
-              element={
-                <PrivateRoute>
-                  <MovieReviewPage />
-                </PrivateRoute>
-              }
-            />
+            <Route path="/movies/favorites" element={<PrivateRoute><FavoriteMoviesPage /></PrivateRoute>}/>
+            <Route path="/reviews/form" element={<PrivateRoute><AddMovieReviewPage /></PrivateRoute>}/>
+            <Route path="/reviews/:id"element={<PrivateRoute><MovieReviewPage /></PrivateRoute>}/>
+            <Route path="/movies/:id" element={<PrivateRoute><MoviePage /></PrivateRoute>} />
+            <Route path="/movies/upcoming" element={<PrivateRoute><UpcomingMoviesPage /></PrivateRoute>} />
+            <Route path="/movies/popular" element={<PrivateRoute><PopularMovies /></PrivateRoute>} />
+            <Route path="/movies/trending" element={<PrivateRoute><TrendingMoviesPage /></PrivateRoute>} />
+            <Route path="/movies/now-playing" element={<PrivateRoute><NowPlayingMoviesPage /></PrivateRoute>} />
 
             {/* Fallback Route */}
             <Route path="*" element={<Navigate to="/" />} />
